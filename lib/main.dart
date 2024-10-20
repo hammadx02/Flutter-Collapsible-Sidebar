@@ -138,7 +138,8 @@ class _SidebarPageState extends State<SidebarPage> {
       CollapsibleItem(
           text: 'News',
           iconImage: NetworkImage(
-              "https://cdn-icons-png.flaticon.com/512/330/330703.png"),
+            "https://cdn-icons-png.flaticon.com/512/330/330703.png",
+          ),
           onPressed: () => setState(() => _headline = 'News'),
           onHold: () => ScaffoldMessenger.of(context)
               .showSnackBar(SnackBar(content: const Text("News"))),
@@ -216,7 +217,7 @@ class _SidebarPageState extends State<SidebarPage> {
         items: _items,
         collapseOnBodyTap: false,
         avatarImg: _avatarImg,
-        title: 'John Smith',
+        title: 'Hammad Ali',
         onTitleTap: () {
           ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(content: Text('Yay! Flutter Collapsible Sidebar!')));
@@ -224,11 +225,10 @@ class _SidebarPageState extends State<SidebarPage> {
         body: _body(size, context),
         backgroundColor: Colors.black,
         selectedTextColor: Colors.limeAccent,
-        textStyle: TextStyle(fontSize: 15, fontStyle: FontStyle.italic),
-        titleStyle: TextStyle(
-            fontSize: 20,
-            fontStyle: FontStyle.italic,
-            fontWeight: FontWeight.bold),
+        textStyle: TextStyle(
+          fontSize: 16,
+        ),
+        titleStyle: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
         toggleTitleStyle: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
         sidebarBoxShadow: [
           BoxShadow(
